@@ -3,11 +3,11 @@
     <input type="hidden" name="id" value="{{user.id}}">
     <div class="form-control">
         <label for="name">Nome:</label>
-        <input type="text" name="name" placeholder="Digite o nome do usuário">
+        <input type="text" name="name" placeholder="Digite o nome do usuário" value="{{user.name}}">
     </div>
     <div class="form-control">
         <label for="name">Profissão:</label>
-        <input type="text" name="occupation" placeholder="Digite a profissão">
+        <input type="text" name="occupation" placeholder="Digite a profissão" value="{{user.occupation}}">
     </div>
     <div class="form-control form-checkbox">
         {{#if user.newsletter}}
