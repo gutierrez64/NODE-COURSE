@@ -110,6 +110,7 @@ h1 {
   max-width: 1000px;
   margin: 1em auto;
   padding-top: 1em;
+  padding-bottom: 200px;
   border-top: 1px solid #ccc;
 }
 
@@ -119,4 +120,21 @@ h1 {
 
 .address-container form {
   width: 300px;
+}
+
+.address-list {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+.address-list div {
+  display: flex;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.address-list form {
+  margin-left: 1em;
 }

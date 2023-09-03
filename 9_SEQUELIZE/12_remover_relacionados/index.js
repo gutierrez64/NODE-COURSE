@@ -107,6 +107,17 @@ app.post('/address/create', async (req, res) => {
     res.redirect(`/users/edit/${UserId}`)
 })
 
+app.post('/address/delete', async (req, res) => {
+    const UserId = req.body.UserId
+    const id = req.body.id
+
+    await Address.destroy({
+        where: { id: id },
+    })
+
+    res.redirect(`/users/edit/${UserId}`)
+})
+
 app.get('/', async (req, res) => {
 
     const users = await User.findAll({ raw: true })
