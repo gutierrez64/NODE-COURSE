@@ -8,6 +8,10 @@ const app = express()
 
 const conn = require('./db/conn')
 
+// Models
+const Tought = require('./models/Tought')
+const User = require('./models/User')
+
 // template engine
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -29,7 +33,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         store: new FileStore({
-            logFn: function () {},
+            logFn: function () { },
             path: require('path').join(require('os').tmpdir(), 'sessions')
         }),
         cookie: {
@@ -57,6 +61,7 @@ app.use((req, res, next) => {
 })
 
 conn
+    //.sync({ force: true })
     .sync()
     .then(() => {
         app.listen(3000)
